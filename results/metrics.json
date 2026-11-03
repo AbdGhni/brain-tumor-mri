@@ -1,50 +1,50 @@
 {
   "test_images": 1600,
-  "accuracy": 0.8688,
-  "macro_f1": 0.8652,
-  "macro_auc": 0.9748,
+  "accuracy": 0.9544,
+  "macro_f1": 0.9535,
+  "macro_auc": 0.9923,
   "recall_per_class": {
-    "glioma": 0.7025,
-    "meningioma": 0.7975,
-    "notumor": 0.9825,
-    "pituitary": 0.9925
+    "glioma": 0.8375,
+    "meningioma": 0.98,
+    "notumor": 1.0,
+    "pituitary": 1.0
   },
   "precision_per_class": {
-    "glioma": 0.9305,
-    "meningioma": 0.8159,
-    "notumor": 0.9357,
-    "pituitary": 0.8152
+    "glioma": 0.9941,
+    "meningioma": 0.9053,
+    "notumor": 0.939,
+    "pituitary": 0.9901
   },
   "auc_per_class": {
-    "glioma": 0.9433,
-    "meningioma": 0.9603,
-    "notumor": 0.998,
-    "pituitary": 0.9975
+    "glioma": 0.9753,
+    "meningioma": 0.9946,
+    "notumor": 0.9992,
+    "pituitary": 0.9999
   },
   "confusion_matrix": [
     [
-      281,
-      67,
-      22,
-      30
-    ],
-    [
-      16,
-      319,
-      5,
-      60
-    ],
-    [
-      3,
-      4,
-      393,
+      335,
+      41,
+      24,
       0
     ],
     [
       2,
-      1,
+      392,
+      2,
+      4
+    ],
+    [
       0,
-      397
+      0,
+      400,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      400
     ]
   ],
   "classes": [
