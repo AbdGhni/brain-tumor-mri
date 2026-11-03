@@ -1,0 +1,56 @@
+{
+  "test_images": 1600,
+  "accuracy": 0.8688,
+  "macro_f1": 0.8652,
+  "macro_auc": 0.9748,
+  "recall_per_class": {
+    "glioma": 0.7025,
+    "meningioma": 0.7975,
+    "notumor": 0.9825,
+    "pituitary": 0.9925
+  },
+  "precision_per_class": {
+    "glioma": 0.9305,
+    "meningioma": 0.8159,
+    "notumor": 0.9357,
+    "pituitary": 0.8152
+  },
+  "auc_per_class": {
+    "glioma": 0.9433,
+    "meningioma": 0.9603,
+    "notumor": 0.998,
+    "pituitary": 0.9975
+  },
+  "confusion_matrix": [
+    [
+      281,
+      67,
+      22,
+      30
+    ],
+    [
+      16,
+      319,
+      5,
+      60
+    ],
+    [
+      3,
+      4,
+      393,
+      0
+    ],
+    [
+      2,
+      1,
+      0,
+      397
+    ]
+  ],
+  "classes": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ]
+}
