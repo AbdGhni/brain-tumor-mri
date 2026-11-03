@@ -4,16 +4,16 @@ import numpy as np
 import tensorflow as tf
 import gradio as gr
 
-IMG = 224
+IMG = 256
 CLASSES = ["glioma", "meningioma", "notumor", "pituitary"]  # alphabetical, as in training
 LABELS = {"glioma": "Glioma", "meningioma": "Meningioma", "notumor": "No tumour", "pituitary": "Pituitary tumour"}
-MODEL = tf.keras.models.load_model("brain_tumor_effnetb0.keras")
+MODEL = tf.keras.models.load_model("brain_tumor_effnetv2s.keras")
 DISCLAIMER = ("Research prototype trained on a public MRI dataset. "
               "Not a medical device. Not for clinical use.")
 
 
 def grad_cam(x):
-    eff = MODEL.get_layer("efficientnetb0")
+    eff = MODEL.get_layer("efficientnetv2-s")
     gm = tf.keras.models.Model(eff.inputs, [eff.get_layer("top_activation").output, eff.output])
     with tf.GradientTape() as tape:
         conv, feat = gm(x)
@@ -45,7 +45,7 @@ demo = gr.Interface(
     fn=predict,
     inputs=gr.Image(type="pil", label="Brain MRI slice"),
     outputs=[gr.Label(label="Model output"), gr.Image(label="Grad-CAM (where the model looked)")],
-    title="Brain tumour MRI classification (EfficientNetB0)",
+    title="Brain tumour MRI classification (EfficientNetV2-S)",
     description=DISCLAIMER,
     flagging_mode="never",
 )
