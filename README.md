@@ -4,7 +4,10 @@ Four-class classifier (glioma, meningioma, pituitary tumour, no tumour) on 2D MR
 
 > **Research prototype. Not a medical device. Not for clinical use.** Trained and tested only on a public dataset; no patient data is included in this repository.
 
-**Live demo:** _Hugging Face Space link to add_
+**Demo:** a Gradio app is in `demo/` (see Run it below). There is no hosted version yet.
+
+![gradcam_examples](results/gradcam_examples.png)
+![confusion_matrix](results/confusion_matrix.png)
 
 ## Results (held-out Testing folder, 1,600 images, 400 per class)
 
